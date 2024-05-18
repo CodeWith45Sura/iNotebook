@@ -7,8 +7,9 @@ const app = express()
 const port = process.env.PORT || 5000 ;
 app.use(cors(
   {
-    origin: [ "https://i-notebook-frontend-pearl.vercel.app" ],
-    methods: ["POST" , "GET" ],
+      Access-Control-Allow-Origin: "https://i-notebook-frontend-pearl.vercel.app" ,
+  
+    methods: ["POST" , "GET" ,"PUT" ],
     credentials:true
   }
 ))
