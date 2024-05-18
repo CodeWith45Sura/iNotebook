@@ -25,15 +25,15 @@ function App() {
   return (
     <div className="App" >
       <NoteState>
-        <BrowserRouter basename="iNotebook">
+        <BrowserRouter basename="/" >
           <Navbar />
           <Alert alert={alert} />
           <div className="container my-5" >
             <Routes>
               <Route exact path="/" element={<Home  showAlert={showAlert}/>} />
-              <Route exact path="/About" element={<About />} />
-              <Route exact path="/login" element={<Login showAlert={showAlert} />} />
-              <Route exact path="/signup" element={<Signup showAlert={showAlert}/>} />
+              <Route  path="/About" element={<About />} />
+              <Route  path="/login" element={<Login showAlert={showAlert} />} />
+              <Route  path="/signup" element={<Signup showAlert={showAlert}/>} />
               <Route element={<NotFound/>}/>
             </Routes>
           </div>
