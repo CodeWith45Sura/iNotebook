@@ -4,12 +4,12 @@ import { useNavigate } from "react-router-dom";
 const Login = (props) => {
   const [credentials, setCredentials] = useState({ email: "", password: "" });
   let navigate = useNavigate();
-
+   const myApi=process.env.REACT_APP_NOTES_API;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch("https://i-notebook-server-eight.vercel.app/api/auth/login", {
+    const response = await fetch(`https://${myApi}/api/auth/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
