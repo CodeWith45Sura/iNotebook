@@ -4,11 +4,12 @@ import { useNavigate } from "react-router-dom";
 const Signup = (props) => {
   const [credentials, setCredentials] = useState({name:"" ,email: "", password: "" ,cpassword:""});
   let navigate = useNavigate();
+  const myApi=process.env.REACT_APP_NOTES_API;
   
   const handleSubmit = async (e) => {
     e.preventDefault();
 const {name,email,password}=credentials;
-    const response = await fetch("https://i-notebook-server-eight.vercel.app/api/auth/createuser", {
+    const response = await fetch(`https://${myApi}/api/auth/createuser`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
