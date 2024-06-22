@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const Login = (props) => {
   const [credentials, setCredentials] = useState({ email: "", password: "" });
   let navigate = useNavigate();
-   const myApi=process.env.REACT_APP_NOTES_API;
+   const myApi='i-notebook-server-eight.vercel.app';
 
   const handleSubmit = async (e) => {
     e.preventDefault();
