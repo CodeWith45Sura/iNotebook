@@ -13,7 +13,9 @@ app.use(cors(
       credentials:true
   }
 ))
-
+app.options('/*' , (_,res)=>{
+  res.sendStatus(200);
+});
 app.use(express.json())
 //Available Routes
 
